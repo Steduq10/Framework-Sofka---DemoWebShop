@@ -28,7 +28,6 @@ public class CheckShoppingWebController {
             webAction.click(landingPage.getShoppingCar(),2,true);
             webAction.click(shoppingCar.getCountry(),2,true);
             webAction.click(shoppingCar.getCountrySelected(),2,true);
-            //webAction.click(shoppingCar.getCountrySelected(),2,true);
             webAction.click(shoppingCar.getTerms(),2,true);
             webAction.click(shoppingCar.getCheckout(),2,true);
 

@@ -29,6 +29,10 @@ public class LandingPage {
     @FindBy(xpath = "/html/body/div[4]/div[2]/div[1]/div[3]/ul/li[4]/a")
     WebElement shoppingCar;
 
+    @CacheLookup
+    @FindBy(xpath = "//a[@href='/contactus']")
+    WebElement contactUs;
+
     public WebElement getRegister(){
         return register;
     }
@@ -47,6 +51,10 @@ public class LandingPage {
 
     public WebElement getShoppingCar() {
         return shoppingCar;
+    }
+
+    public WebElement getContactUs() {
+        return contactUs;
     }
 
     public LandingPage(WebDriver driver) {
