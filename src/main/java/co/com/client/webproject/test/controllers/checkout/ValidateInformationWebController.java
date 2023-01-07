@@ -36,14 +36,16 @@ public class ValidateInformationWebController {
 
         try{
             CheckOut checkOut = new CheckOut(webAction.getDriver());
-          billingAddress =  webAction.getText(checkOut.getBillingAddress(),2,true);
+            webAction.click(checkOut.getBillingAddress(),2,true);
+          billingAddress =  webAction.getText(checkOut.getOptionbilling(),2,true);
             webAction.click(checkOut.getBillingContinue(),2,true);
 
-          shippingAddress =  webAction.getText(checkOut.getShippingAddress(),2,true );
+            webAction.click(checkOut.getShippingAddress(),2,true);
+          shippingAddress =  webAction.getText(checkOut.getOptionShipping(),2,true );
             webAction.click(checkOut.getShippingContinue(),2,true);
 
 
-            webAction.click(checkOut.getShippingContinue(),2,true);
+            webAction.click(checkOut.getShippingMethodContinue(),2,true);
 
             webAction.click(checkOut.getPaymentMethodContinue(),2,true);
 

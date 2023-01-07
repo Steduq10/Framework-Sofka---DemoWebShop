@@ -20,7 +20,7 @@ public class LoginPageWebController {
         this.webAction = webAction;
     }
 
-    public void llenarCamposDeLogin(){
+    public void fillLoginForm(){
         try{
             LoginPage loginPage = new LoginPage(webAction.getDriver());
             webAction.sendText(loginPage.getEmail(),customer.getEmail(),2,true);

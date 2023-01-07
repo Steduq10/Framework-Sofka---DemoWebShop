@@ -12,17 +12,13 @@ import java.util.List;
 
 public class OrderProcessedWebController {
     private WebAction webAction;
-    private Customer customer;
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 
     public void setWebAction(WebAction webAction){
         this.webAction = webAction;
     }
 
-    public void validateInformation(){
+    public List<String> validateInformation(){
         String orderNumber = "";
         String message = "";
 
@@ -34,17 +30,12 @@ public class OrderProcessedWebController {
             orderNumber =  webAction.getText(orderProcessed.getOrderNumber(),2,true);
             message =  webAction.getText(orderProcessed.getMessageProcessed(),2,true);
 
-
-
-
-
                 processed.add(orderNumber);
                 processed.add(message);
-
-
 
         }catch (WebActionsException e){
             Report.reportFailure("Ocurrio un error al intentar completar la orden",e);
         }
+        return processed;
     }
 }
