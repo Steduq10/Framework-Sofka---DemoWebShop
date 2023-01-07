@@ -13,14 +13,14 @@ public class MyAccountPage {
     WebElement registerCompletedLabel;
 
     @CacheLookup
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")
-    WebElement registredEmail;
+    @FindBy(xpath = "//a[@class='account']")
+    WebElement registeredEmail;
 
     public WebElement getRegisterCompletedLabel(){
         return registerCompletedLabel;
     }
-    public WebElement getRegistredEmail(){
-        return registredEmail;
+    public WebElement getRegisteredEmail(){
+        return registeredEmail;
     }
 
     public MyAccountPage(WebDriver driver) {

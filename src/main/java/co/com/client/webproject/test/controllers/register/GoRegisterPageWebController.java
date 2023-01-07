@@ -1,11 +1,11 @@
-package co.com.client.webproject.test.controllers;
+package co.com.client.webproject.test.controllers.register;
 
 import co.com.client.webproject.test.page.LandingPage;
 import co.com.sofka.test.actions.WebAction;
 import co.com.sofka.test.evidence.reports.Report;
 import co.com.sofka.test.exceptions.WebActionsException;
 
-public class LoginPageWebController {
+public class GoRegisterPageWebController {
 
     private WebAction webAction;
 

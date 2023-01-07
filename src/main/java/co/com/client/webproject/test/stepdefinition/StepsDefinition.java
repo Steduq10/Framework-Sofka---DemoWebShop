@@ -1,8 +1,8 @@
 package co.com.client.webproject.test.stepdefinition;
 
-import co.com.client.webproject.test.controllers.LoginPageWebController;
-import co.com.client.webproject.test.controllers.MyAccountWebController;
-import co.com.client.webproject.test.controllers.RegisterPageWebController;
+import co.com.client.webproject.test.controllers.register.GoRegisterPageWebController;
+import co.com.client.webproject.test.controllers.register.MyAccountWebController;
+import co.com.client.webproject.test.controllers.register.RegisterPageWebController;
 import co.com.client.webproject.test.controllers.openwebpage.StartBrowserWebController;
 import co.com.client.webproject.test.data.objects.TestInfo;
 import co.com.client.webproject.test.models.Customer;
@@ -44,7 +44,7 @@ public class StepsDefinition extends GeneralSetUp {
 
     @Cuando("el cliente registra sus datos para una cuenta en línea de forma exitosa")
     public void elClienteRegistraSusDatosParaUnaCuentaEnLineaDeFormaExitosa() {
-        LoginPageWebController loginPageWebController = new LoginPageWebController();
+        GoRegisterPageWebController loginPageWebController = new GoRegisterPageWebController();
         loginPageWebController.setWebAction(webAction);
         loginPageWebController.irHaciaRegisterPage();
 

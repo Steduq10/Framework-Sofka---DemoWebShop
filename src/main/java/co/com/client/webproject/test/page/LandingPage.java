@@ -13,8 +13,16 @@ public class LandingPage {
     @FindBy(className = "ico-register")
     WebElement register;
 
+    @CacheLookup
+    @FindBy(className = "ico-login")
+    WebElement login;
+
     public WebElement getRegister(){
         return register;
+    }
+
+    public WebElement getLogin() {
+        return login;
     }
 
     public LandingPage(WebDriver driver) {

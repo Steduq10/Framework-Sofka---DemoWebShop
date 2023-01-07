@@ -1,4 +1,4 @@
-package co.com.client.webproject.test.controllers;
+package co.com.client.webproject.test.controllers.register;
 
 import co.com.client.webproject.test.page.MyAccountPage;
 import co.com.sofka.test.actions.WebAction;
@@ -18,7 +18,7 @@ public class MyAccountWebController {
         try {
             MyAccountPage myAccountPage = new MyAccountPage(webAction.getDriver());
             label = webAction.getText(myAccountPage.getRegisterCompletedLabel(), 2, true);
-            email = webAction.getText(myAccountPage.getRegistredEmail(),2,true);
+            email = webAction.getText(myAccountPage.getRegisteredEmail(),2,true);
         } catch (WebActionsException e) {
             Report.reportFailure("Ocurrió un error al intentar validar el mensaje", e);
         }

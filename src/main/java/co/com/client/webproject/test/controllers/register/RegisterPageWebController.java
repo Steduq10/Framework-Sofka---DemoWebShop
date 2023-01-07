@@ -1,4 +1,4 @@
-package co.com.client.webproject.test.controllers;
+package co.com.client.webproject.test.controllers.register;
 
 import co.com.client.webproject.test.models.Customer;
 import co.com.client.webproject.test.page.RegisterPage;
