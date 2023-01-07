@@ -17,12 +17,28 @@ public class LandingPage {
     @FindBy(className = "ico-login")
     WebElement login;
 
+    @CacheLookup
+    @FindBy(xpath = "//input[@onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/2/1/1    ');return false;\"]")
+    WebElement giftCard;
+
+    @CacheLookup
+    @FindBy(xpath = "//input[@onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/31/1/1    ');return false;\"]")
+    WebElement laptop;
+
     public WebElement getRegister(){
         return register;
     }
 
     public WebElement getLogin() {
         return login;
+    }
+
+    public WebElement getGiftCard() {
+        return giftCard;
+    }
+
+    public WebElement getLaptop() {
+        return laptop;
     }
 
     public LandingPage(WebDriver driver) {
