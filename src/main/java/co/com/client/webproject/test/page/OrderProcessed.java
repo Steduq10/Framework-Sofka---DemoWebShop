@@ -16,6 +16,14 @@ public class OrderProcessed {
     @FindBy(xpath = "//ul[@class=\"details\"] //li[1]")
     WebElement orderNumber;
 
+    public WebElement getMessageProcessed() {
+        return messageProcessed;
+    }
+
+    public WebElement getOrderNumber() {
+        return orderNumber;
+    }
+
     public OrderProcessed(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
