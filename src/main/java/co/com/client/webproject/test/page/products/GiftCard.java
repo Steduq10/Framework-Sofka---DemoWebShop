@@ -24,6 +24,10 @@ public class GiftCard {
     @FindBy(id = "add-to-cart-button-2")
     WebElement addToCar;
 
+    @CacheLookup
+    @FindBy(xpath = "//a[@href='/']")
+    WebElement landingPage;
+
 
     public WebElement getName() {
         return name;
@@ -39,6 +43,10 @@ public class GiftCard {
 
     public WebElement getAddToCar() {
         return addToCar;
+    }
+
+    public WebElement getLandingPage() {
+        return landingPage;
     }
 
     public GiftCard(WebDriver driver) {

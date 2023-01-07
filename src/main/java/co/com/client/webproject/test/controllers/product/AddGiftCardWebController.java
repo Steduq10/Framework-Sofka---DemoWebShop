@@ -26,6 +26,7 @@ public class AddGiftCardWebController {
             webAction.sendText(giftCard.getEmail(),customer.getPassword(),2,true);
             webAction.sendText(giftCard.getMessage(),"This is a giftcard for you",2,true);
             webAction.click(giftCard.getAddToCar(),2,true);
+            webAction.click(giftCard.getLandingPage(),2,true);
         }catch (WebActionsException e){
             Report.reportFailure("Ocurrio un error al intentar agregar el producto al carrito de compras",e);
         }

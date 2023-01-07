@@ -25,6 +25,10 @@ public class LandingPage {
     @FindBy(xpath = "//input[@onclick=\"AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/31/1/1    ');return false;\"]")
     WebElement laptop;
 
+    @CacheLookup
+    @FindBy(className = "flyout-cart")
+    WebElement shoppingCar;
+
     public WebElement getRegister(){
         return register;
     }
@@ -39,6 +43,10 @@ public class LandingPage {
 
     public WebElement getLaptop() {
         return laptop;
+    }
+
+    public WebElement getShoppingCar() {
+        return shoppingCar;
     }
 
     public LandingPage(WebDriver driver) {
