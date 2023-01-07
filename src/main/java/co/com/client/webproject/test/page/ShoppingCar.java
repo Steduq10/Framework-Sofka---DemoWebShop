@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 public class ShoppingCar {
 
     @CacheLookup
+    @FindBy(xpath = "//*[@id=\"topcartlink\"]/a")
+    WebElement shopping;
+
+    @CacheLookup
     @FindBy(xpath = "//a[@href='/25-virtual-gift-card']")
     WebElement giftCard;
 
@@ -31,6 +35,11 @@ public class ShoppingCar {
     @CacheLookup
     @FindBy(id = "checkout")
     WebElement checkout;
+
+    public WebElement getShopping() {
+        return shopping;
+    }
+
     public WebElement getGiftCard() {
         return giftCard;
     }

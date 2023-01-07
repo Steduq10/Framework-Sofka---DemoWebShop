@@ -26,7 +26,7 @@ public class LandingPage {
     WebElement laptop;
 
     @CacheLookup
-    @FindBy(className = "flyout-cart")
+    @FindBy(xpath = "/html/body/div[4]/div[2]/div[1]/div[3]/ul/li[4]/a")
     WebElement shoppingCar;
 
     public WebElement getRegister(){

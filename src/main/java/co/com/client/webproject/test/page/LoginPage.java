@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
     @CacheLookup
-    @FindBy(id = "email")
+    @FindBy(id = "Email")
     WebElement email;
 
     @CacheLookup

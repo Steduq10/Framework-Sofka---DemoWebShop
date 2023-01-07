@@ -25,7 +25,7 @@ public class GiftCard {
     WebElement addToCar;
 
     @CacheLookup
-    @FindBy(xpath = "//a[@href='/']")
+    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div[1]/ul/li[1]/span[1]/a")
     WebElement landingPage;
 
 

@@ -22,8 +22,8 @@ public class AddGiftCardWebController {
     public void addGiftCardToCar(){
         try{
             GiftCard giftCard = new GiftCard(webAction.getDriver());
-            webAction.sendText(giftCard.getName(),customer.getEmail(),2,true);
-            webAction.sendText(giftCard.getEmail(),customer.getPassword(),2,true);
+            webAction.sendText(giftCard.getName(),customer.getFirstName(),2,true);
+            webAction.sendText(giftCard.getEmail(),customer.getEmail(),2,true);
             webAction.sendText(giftCard.getMessage(),"This is a giftcard for you",2,true);
             webAction.click(giftCard.getAddToCar(),2,true);
             webAction.click(giftCard.getLandingPage(),2,true);

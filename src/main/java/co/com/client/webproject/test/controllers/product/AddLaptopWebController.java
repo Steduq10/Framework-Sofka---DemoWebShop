@@ -15,7 +15,7 @@ public class AddLaptopWebController {
     public void goToLaptopPage(){
         try{
             LandingPage landingPage = new LandingPage(webAction.getDriver());
-            webAction.click(landingPage.getLaptop(),2,true);
+            webAction.click(landingPage.getLaptop(),5,true);
         }catch (WebActionsException e){
             Report.reportFailure("Ocurrió un error al intentar agregar el producto al carrito de compras",e);
         }

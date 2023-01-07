@@ -52,7 +52,7 @@ public class OrdenExitosaSteps extends GeneralSetUp {
         goLoginPageWebController.goToLoginPage();
 
         LoginPageWebController loginPageWebController = new LoginPageWebController();
-        loginPageWebController.setCustomer(customer);
+        //loginPageWebController.setCustomer(customer);
         loginPageWebController.setWebAction(webAction);
         loginPageWebController.fillLoginForm();
     }
@@ -74,12 +74,11 @@ public class OrdenExitosaSteps extends GeneralSetUp {
 
 
 
-
-
     }
 
     @Y("agrega la informacion de envio y pago")
     public void agregaLaInformacionDeEnvioYPago() {
+
         CheckShoppingWebController checkShoppingWebController = new CheckShoppingWebController();
         checkShoppingWebController.setCustomer(customer);
         checkShoppingWebController.setWebAction(webAction);

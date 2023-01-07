@@ -25,7 +25,7 @@ public class CheckOutWebController {
             CheckOut checkOut = new CheckOut(webAction.getDriver());
             webAction.click(checkOut.getBillingContinue(),2,true);
             webAction.click(checkOut.getShippingContinue(),2,true);
-            webAction.click(checkOut.getShippingContinue(),2,true);
+            webAction.click(checkOut.getShippingMethodContinue(),2,true);
             webAction.click(checkOut.getPaymentMethodContinue(),2,true);
             webAction.click(checkOut.getPaymentInformationContinue(),2,true);
             webAction.click(checkOut.getConfirmOrder(),2,true);

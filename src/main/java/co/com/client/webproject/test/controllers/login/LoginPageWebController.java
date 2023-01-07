@@ -10,11 +10,11 @@ import co.com.sofka.test.exceptions.WebActionsException;
 public class LoginPageWebController {
 
     private WebAction webAction;
-    private Customer customer;
+   // private Customer customer;
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
+//    public void setCustomer(Customer customer) {
+  //      this.customer = customer;
+  //  }
 
     public void setWebAction(WebAction webAction){
         this.webAction = webAction;
@@ -23,9 +23,11 @@ public class LoginPageWebController {
     public void fillLoginForm(){
         try{
             LoginPage loginPage = new LoginPage(webAction.getDriver());
-            webAction.sendText(loginPage.getEmail(),customer.getEmail(),2,true);
-            webAction.sendText(loginPage.getPassword(),customer.getPassword(),2,true);
-            webAction.click(loginPage.getLoginButton(),2,true);
+            //webAction.click(loginPage.getEmail(),10,false);
+            webAction.sendText(loginPage.getEmail(),"platonsocrates@mail.com",10,true);
+           // webAction.click(loginPage.getPassword(),10,false);
+            webAction.sendText(loginPage.getPassword(),"platon",10,true);
+            webAction.click(loginPage.getLoginButton(),5,true);
         }catch (WebActionsException e){
             Report.reportFailure("Ocurrio un error al intentar loguearse",e);
         }
