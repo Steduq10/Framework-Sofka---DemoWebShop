@@ -14,26 +14,15 @@ public class ValidateEmptyEnquiryWebController {
     }
 
     public String validateEmptyEnquiry(){
-      //  String name = "";
-       // String email = "";
+
         String error = "";
-       // String confirmation = "";
 
-
-      //  List<String> enquiryInformation = new ArrayList<>();
 
         try{
             ContactUs contactUs = new ContactUs(webAction.getDriver());
-          //  name =  webAction.getText(contactUs.getFullname(),2,true);
-            //email =  webAction.getText(contactUs.getEmail(),2,true);
+
             error = webAction.getText(contactUs.getValidationError(),2,true);
-            //confirmation = webAction.getText(contactUs.getConfirmation(),2,true);
 
-
-         //   enquiryInformation.add(name);
-         //   enquiryInformation.add(email);
-         //   enquiryInformation.add(error);
-          //  enquiryInformation.add(confirmation);
 
         }catch (WebActionsException e){
             Report.reportFailure("Ocurrio un error al intentar validar la peticion",e);

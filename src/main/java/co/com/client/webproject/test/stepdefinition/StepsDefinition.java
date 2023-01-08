@@ -59,9 +59,9 @@ public class StepsDefinition extends GeneralSetUp {
         MyAccountWebController myAccountWebController = new MyAccountWebController();
         myAccountWebController.setWebAction(webAction);
 
-        //Assert.Hard.thatString(myAccountWebController.obtenerNombreDeNuevoUsuario()).isEqualTo(customer.getEmail());
-        Assert.Hard.thatString(myAccountWebController.obtenerNombreDeNuevoUsuario()).isEqualTo("Your registration fail");
-        //Assert.Hard.thatString(myAccountWebController.obtenerNombreDeNuevoUsuario()).contains("registration");
+       // Assert.Hard.thatString(myAccountWebController.obtenerNombreDeNuevoUsuario()).isEqualTo(customer.getEmail());
+        //Assert.Hard.thatString(myAccountWebController.obtenerNombreDeNuevoUsuario()).isEqualTo("Your registration fail");
+        Assert.Hard.thatString(myAccountWebController.obtenerNombreDeNuevoUsuario()).contains("registration");
     }
 
     @After

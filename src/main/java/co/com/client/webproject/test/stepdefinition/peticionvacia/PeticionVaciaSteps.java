@@ -11,7 +11,10 @@ import co.com.client.webproject.test.models.Customer;
 import co.com.client.webproject.test.stepdefinition.GeneralSetUp;
 import co.com.sofka.test.actions.WebAction;
 import co.com.sofka.test.evidence.reports.Assert;
+import co.com.sofka.test.evidence.reports.Report;
+import co.com.sofka.test.exceptions.WebActionsException;
 import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
@@ -75,5 +78,18 @@ public class PeticionVaciaSteps extends GeneralSetUp {
 
         Assert.Hard.thatString(validateEmptyEnquiryWebController.validateEmptyEnquiry())
                 .contains("Enter enquiry");
+    }
+
+    @After
+    public void tearDown() throws WebActionsException {
+        webAction.pause(5, false);
+
+        if (webAction != null && webAction.getDriver() != null)
+            webAction.closeBrowser();
+
+        Report.reportInfo("***** HA FINALIZADO LA PRUEBA******"
+                .concat(testInfo.getFeatureName())
+                .concat("-")
+                .concat(testInfo.getScenarioName()));
     }
 }
