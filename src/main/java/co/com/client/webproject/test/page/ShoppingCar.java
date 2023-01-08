@@ -32,6 +32,23 @@ public class ShoppingCar {
     @FindBy(id = "checkout")
     WebElement checkout;
 
+    @CacheLookup
+    @FindBy(xpath = "(//input[@name='removefromcart'])[1]")
+    WebElement removeGiftCard;
+
+    @CacheLookup
+    @FindBy(xpath = "(//input[@name='removefromcart'])[2]")
+    WebElement removeLaptop;
+
+    @CacheLookup
+    @FindBy(xpath = "//input[@name='updatecart']")
+    WebElement updateCart;
+
+    @CacheLookup
+    @FindBy(xpath = "//div[@class='order-summary-content']")
+    WebElement emptyCarMessage;
+
+
 
 
     public WebElement getGiftCard() {
@@ -56,6 +73,22 @@ public class ShoppingCar {
 
     public WebElement getCheckout() {
         return checkout;
+    }
+
+    public WebElement getRemoveGiftCard() {
+        return removeGiftCard;
+    }
+
+    public WebElement getRemoveLaptop() {
+        return removeLaptop;
+    }
+
+    public WebElement getUpdateCart() {
+        return updateCart;
+    }
+
+    public WebElement getEmptyCarMessage() {
+        return emptyCarMessage;
     }
 
     public ShoppingCar(WebDriver driver) {
